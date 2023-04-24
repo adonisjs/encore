@@ -8,13 +8,6 @@
  */
 
 /**
- * Content of the hotfile
- */
-export type HotFile = {
-  url: string
-}
-
-/**
  * Parameters passed to the setAttributes callback
  */
 export type SetAttributesCallbackParams = {
