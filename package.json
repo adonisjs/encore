@@ -85,8 +85,8 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@adonisjs/core": "^6.1.1-0",
-    "@adonisjs/view": "7.0.0-0"
+    "@adonisjs/core": "^6.1.5-4",
+    "@adonisjs/view": "7.0.0-2"
   },
   "eslintConfig": {
     "extends": [
