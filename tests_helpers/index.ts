@@ -36,6 +36,7 @@ export async function setupApp(
     })
     .withCoreConfig()
     .withCoreProviders()
+    .merge({ config: { views: { cache: { enabled: false } } } })
     .merge({ config: additionalConfig })
     .create(BASE_URL, { importer: IMPORTER })
 

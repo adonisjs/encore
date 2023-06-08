@@ -5,7 +5,7 @@ import { expectTypeOf } from '@japa/expect-type'
 import { runFailedTests } from '@japa/run-failed-tests'
 import { processCliArgs, configure, run } from '@japa/runner'
 import { pathToFileURL } from 'node:url'
-import { join } from 'desm'
+import { BASE_URL } from '../tests_helpers/index.js'
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +27,8 @@ configure({
     plugins: [
       assert(),
       fileSystem({
-        autoClean: true,
-        basePath: join(import.meta.url, '..', 'tests', '__app'),
+        autoClean: false,
+        basePath: BASE_URL,
       }),
       expectTypeOf(),
       runFailedTests(),
