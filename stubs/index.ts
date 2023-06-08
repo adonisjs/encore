@@ -7,6 +7,6 @@
  * file that was distributed with this source code.
  */
 
-import { dirname } from 'desm'
+import { getDirname } from '@poppinss/utils'
 
-export const stubsRoot = dirname(import.meta.url)
+export const stubsRoot = getDirname(import.meta.url)
