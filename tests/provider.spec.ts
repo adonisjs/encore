@@ -72,7 +72,7 @@ test.group('Encore provider', () => {
     )
   })
 
-  test('raise exception when manifest.json is missing', async ({ fs, assert }) => {
+  test('raise exception when manifest.json is missing', async ({ assert }) => {
     const { app } = await setupApp('web')
     const encore = await app.container.make('encore')
 
@@ -84,7 +84,7 @@ test.group('Encore provider', () => {
     )
   })
 
-  test('raise exception when entrypoints.json file is missing', async ({ fs, assert }) => {
+  test('raise exception when entrypoints.json file is missing', async ({ assert }) => {
     const { app } = await setupApp('web')
     const encore = await app.container.make('encore')
 
