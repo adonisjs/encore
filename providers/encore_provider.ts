@@ -7,7 +7,6 @@
  * file that was distributed with this source code.
  */
 
-import '@adonisjs/view'
 import { EdgeError } from 'edge-error'
 import { Encore } from '../src/encore.js'
 import { ViewContract } from '@adonisjs/view/types'
