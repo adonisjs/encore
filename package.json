@@ -17,7 +17,7 @@
   "exports": {
     ".": "./build/index.js",
     "./services/main": "./build/services/encore.js",
-    "./providers/encore_provider": "./build/providers/encore_provider.js",
+    "./encore_provider": "./build/providers/encore_provider.js",
     "./types": "./build/src/types/main.js",
     "./types/extended": "./build/src/types/extended.js"
   },

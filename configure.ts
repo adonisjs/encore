@@ -22,7 +22,7 @@ export async function configure(command: Configure) {
   })
 
   await command.updateRcFile((rcFile) => {
-    rcFile.addProvider('@adonisjs/encore/providers/encore_provider')
+    rcFile.addProvider('@adonisjs/encore/encore_provider')
   })
 
   const packagesToInstall = [
