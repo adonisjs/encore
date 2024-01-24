@@ -1,7 +1,7 @@
 {
   "name": "@adonisjs/encore",
   "description": "Webpack Encore plugin for Adonis.js",
-  "version": "0.0.1-1",
+  "version": "1.0.0",
   "main": "build/index.js",
   "type": "module",
   "files": [
