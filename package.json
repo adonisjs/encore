@@ -86,7 +86,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "next"
+    "tag": "latest"
   },
   "np": {
     "message": "chore(release): %s",
