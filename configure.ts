@@ -7,21 +7,17 @@
  * file that was distributed with this source code.
  */
 
-import { join } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import type Configure from '@adonisjs/core/commands/configure'
+import { stubsRoot } from './index.js'
 
 /**
  * Configures the package
  */
 export async function configure(command: Configure) {
-  const stubDestination = join(fileURLToPath(command.app.appRoot), 'webpack.config.cjs')
+  const codemods = await command.createCodemods()
+  await codemods.makeUsingStub(stubsRoot, 'webpack/webpack_config.stub', {})
 
-  await command.publishStub('webpack/webpack_config.stub', {
-    destination: stubDestination,
-  })
-
-  await command.updateRcFile((rcFile) => {
+  await codemods.updateRcFile((rcFile) => {
     rcFile.addProvider('@adonisjs/encore/encore_provider')
   })
 
@@ -32,5 +28,6 @@ export async function configure(command: Configure) {
     { name: 'webpack', isDevDependency: true },
     { name: 'webpack-cli', isDevDependency: true },
   ]
-  command.listPackagesToInstall(packagesToInstall)
+
+  codemods.installPackages(packagesToInstall)
 }

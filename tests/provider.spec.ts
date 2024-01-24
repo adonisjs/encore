@@ -1,5 +1,6 @@
 import { test } from '@japa/runner'
 import { setupApp } from '../tests_helpers/index.js'
+import edge from 'edge.js'
 
 test.group('Encore provider', () => {
   test('register encore service provider', async ({ assert }) => {
@@ -10,17 +11,17 @@ test.group('Encore provider', () => {
   })
 
   test('register encore tags', async ({ assert }) => {
-    const { app } = await setupApp('web')
-    const view = await app.container.make('view')
-    const tags = Object.keys(view.tags)
+    await setupApp('web')
+    edge.createRenderer()
+    const tags = Object.keys(edge.tags)
 
     assert.includeMembers(tags, ['entryPointStyles', 'entryPointScripts'])
   })
 
   test('register encore globals', async ({ assert }) => {
-    const { app } = await setupApp('web')
-    const view = await app.container.make('view')
-    const globals = Object.keys(view.GLOBALS)
+    await setupApp('web')
+    edge.createRenderer()
+    const globals = Object.keys(edge.globals)
 
     assert.includeMembers(globals, ['encore', 'asset'])
   })

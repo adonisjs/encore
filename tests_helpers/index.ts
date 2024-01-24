@@ -29,8 +29,8 @@ export async function setupApp(
     .merge({
       rcFileContents: {
         providers: [
-          '@adonisjs/view/providers/views_provider',
-          '../../providers/encore_provider.js',
+          () => import('../providers/encore_provider.js'),
+          () => import('@adonisjs/core/providers/edge_provider'),
         ],
       },
     })

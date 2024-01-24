@@ -1,6 +1,6 @@
----
-to: {{ destination }}
----
+{{{
+  exports({ to: app.makePath('webpack.config.cjs') })
+}}}
 const { join } = require("path");
 const Encore = require("@symfony/webpack-encore");
 
