@@ -4,6 +4,11 @@
 
 [![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url] [![snyk-image]][snyk-url]
 
+> [!WARNING]
+> The recommended way to build an application with AdonisJS is now Vite. We don't recommend Webpack Encore anymore, but we're maintaining this package to make it easier for v5 applications to migrate to v6.
+>
+> If you are looking for a migration guide from Encore to Vite, please check [this guide](https://v6-migration.adonisjs.com/guides/migrate-to-vite).
+
 ## Introduction
 Package to add [Webpack Encore](https://symfony.com/doc/current/frontend.html) to AdonisJS.
 
