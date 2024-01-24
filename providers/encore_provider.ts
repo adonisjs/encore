@@ -10,6 +10,15 @@
 import { Encore } from '../src/encore.js'
 import { ApplicationService } from '@adonisjs/core/types'
 
+/**
+ * Extend the container bindings
+ */
+declare module '@adonisjs/core/types' {
+  interface ContainerBindings {
+    encore: Encore
+  }
+}
+
 export default class EncoreServiceProvider {
   constructor(protected app: ApplicationService) {}
 

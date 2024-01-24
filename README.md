@@ -7,9 +7,6 @@
 ## Introduction
 Package to add [Webpack Encore](https://symfony.com/doc/current/frontend.html) to AdonisJS.
 
-## Official Documentation
-The documentation is available on the [AdonisJS website](https://docs.adonisjs.com/guides/assets-bundlers/encore)
-
 ## Contributing
 One of the primary goals of AdonisJS is to have a vibrant community of users and contributors who believes in the principles of the framework.
 

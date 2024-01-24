@@ -15,8 +15,7 @@
     ".": "./build/index.js",
     "./services/main": "./build/services/encore.js",
     "./encore_provider": "./build/providers/encore_provider.js",
-    "./types": "./build/src/types/main.js",
-    "./types/extended": "./build/src/types/extended.js"
+    "./types": "./build/src/types/main.js"
   },
   "scripts": {
     "clean": "del-cli build",
